@@ -1,0 +1,270 @@
+ @keyframes color-bth-change{
+   50%{
+     color: rgba(0, 0, 0, 0.719);
+   } 
+ }
+ @keyframes shadow-btn {
+   50% {
+     box-shadow: whitesmoke;
+   }
+ }
+
+body {
+  min-width: 320px;
+  font-size: 28px;
+}
+
+#main {
+  min-width: 320px;
+  width: 100vw;
+  height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out; 
+}
+.overlay-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  width: 100%;
+  height: 100%;
+  background-image: url(./assets/images/overlay1.png); 
+  background-position: center;
+  background-size: 100% 100%;
+  
+}
+
+.weather {
+  align-self: flex-end;
+  margin-top:10px;
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: rgba(91, 99, 114, 0.603);
+  font-size: 1.5rem;
+  color: azure;
+}
+.city-weather {
+  color: inherit;
+  background-color: transparent;
+  transition: background-color 1s linear;
+  transition: "color" 2s linear;
+}
+.city-weather:hover {
+  cursor:pointer;
+  background-color: #000000d2;
+  color: white;
+  transition: background-color 1s linear;
+  transition: "color" 2s linear;
+}
+.city-weather:focus{
+  background-color: #000000d2;
+  color: white;
+}
+.weatherTextInfo, .city-weather-caption {
+  margin:0;
+  padding: 0;
+  text-align: right;
+}
+.date-greeting-container {
+  margin-top: auto;
+  border-radius: 15px;
+  background-color: rgba(80, 80, 80, 0.6);
+}
+.time-text {  
+  margin:0;
+  text-align: center;
+  color: white;
+  font-size: 7em;
+  font-weight: bold;  
+}
+.date-text {
+  margin:0;
+  text-align: center;
+  font-size: 2em;
+  color: antiquewhite;  
+}
+.greeting{
+  background-color: rgba(220, 220, 220, 0.5);
+}
+.greeting-text {
+  text-align: center;
+  font-size: 1.5em;  
+}
+
+.greeting-name {
+  color: inherit;
+  transition: color 2s linear;
+  background-color: inherit;
+  transition: background-color 1s linear;
+}
+.greeting-name:hover, .purpose-input:hover{
+  cursor: pointer;
+  background-color: #000000d2;
+  color: white;
+  transition: background-color 1s linear;
+  transition: "color" 2s linear;
+}
+
+.greeting-name:focus, .purpose-input:focus {
+  cursor: pointer;
+  color: white;
+  background-color: #000000d2;;
+  
+}
+.btn-image-switch-container {
+  display: flex;
+  justify-content: space-between;
+}
+.bt-reload-bunch-img {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left:5px;
+  margin-top: 5px;
+  position: absolute;
+  top:0;
+  left: 0;
+  outline: none;
+  box-shadow: none;
+  border:none;
+  overflow: hidden;
+  cursor: pointer;
+  background-color:rgba(46, 50, 71, 0.233);
+  font-size: 1.2rem;
+  color: aliceblue;
+ 
+}
+.bt-reload-bunch-img:hover {
+  width: fit-content;
+  height: 50px;
+  transition: width .5s linear, height .5s linear;
+
+}
+.btn-scroll-img {
+  margin:0;
+  position: absolute;
+  border: none;
+  outline: none;
+  bottom: 6rem;
+  font-size: 10rem;
+  line-height: 0;
+  color: azure;
+  background: transparent
+}
+.btn-scroll-img:hover {
+  cursor: pointer;
+  animation: color-bth-change 3s infinite;  
+}
+
+.bt-previous-img{    
+  left: 10px;
+}
+
+.bt-next-img {  
+  right:10px;
+}
+.purpose {
+  margin-top:10px;
+  color: rgb(234, 238, 246);
+}
+.purpose-caption {
+  margin: 0;
+  padding: 10px 10px 5px;
+  text-align: center;
+  font-size: 1.35rem;
+  
+}
+.purpose-input {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.35rem;
+  color: inherit;
+  transition: color 2s linear;
+  background-color: inherit;
+  transition: background-color 1s linear;
+  overflow-wrap: break-word;
+  max-width: 70%;  
+}
+
+
+
+.quote { 
+  margin-top:auto;
+  max-width: 80vw;
+  font-size: 1.5rem;
+  color: azure;
+  transition: background-color 1s linear;
+}
+.quote:hover {
+  cursor: pointer;
+  background-color: #0000008a;
+  transition: background-color 1s linear;
+}
+.quote-text {  
+  text-align: center;  
+  font-style: italic;  
+}
+.quote-author {
+  text-align: center;
+  
+}
+
+@media (max-width:1366px){
+  body{
+    font-size: 22px;
+  }
+}
+@media (max-width:900px){
+  body{
+    font-size: 20px;
+  }
+  .purpose-caption, .purpose-input, .weather,.quote-text,.quote-author{
+    font-size: 1.3rem;
+  }
+}
+@media (max-width:750px){
+  body{
+    font-size: 16px;
+  }
+  .purpose-caption, .purpose-input, .weather, .quote-text,.quote-author{
+    font-size: 1.2rem;
+  }
+  .btn-scroll-img {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width:500px){
+  body{
+    font-size: 14px;
+  }
+  .time-text{
+    font-size: 5rem;
+  }
+  .purpose-caption, .purpose-input, .weather, .quote-text,.quote-author{
+    font-size: 1rem;
+  }
+  .purpose {
+    /* margin-bottom: 20%; */
+    padding-bottom: 20%;
+  }
+  .btn-scroll-img {
+    margin-top:0;
+    bottom: 0;
+    padding-bottom: 20px;
+    padding-left:20px;
+    padding-right:20px;
+    position: static;
+    line-height: inherit;
+    font-size: 2rem;
+  }
+  .quote {
+    margin:5px 0 0 0;
+  }
+  .overlay-container {
+    justify-content: space-between;
+  }
+}
